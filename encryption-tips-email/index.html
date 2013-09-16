@@ -5,7 +5,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Nothing found for  Wordpress Wp-content Uploads 2013 06 1098083_619177172470_174772823_n1 Jpg);</title>
+<title>Encryption Tips: Email | Restore The Fourth SF</title>
 
 
 
@@ -54,9 +54,13 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 <script type='text/javascript' src='http://restorethefourthsf.com/wp-content/plugins/events-manager/includes/js/events-manager.js?ver=5.51'></script>
 <script type='text/javascript' src='http://restorethefourthsf.com/wp-content/plugins/wordpress-social-stream/js/jquery.social.stream.wall.1.3.js?ver=3.5.2'></script>
 <script type='text/javascript' src='http://restorethefourthsf.com/wp-content/plugins/wordpress-social-stream/js/jquery.social.stream.1.5.4.min.js?ver=3.5.2'></script>
+<script type='text/javascript' async='async' src='//cdn.jsdelivr.net/wordpress/3.6/js/comment-reply.min.js'></script>
 
  
 
+<link rel='next' title='Encryption Tips: Text Messages' href='http://restorethefourthsf.com/encryption-tips-text-messages/' />
+
+<link rel='shortlink' href='http://restorethefourthsf.com/?p=227' />
 <!-- styles for Simple Google Map -->
 <style type='text/css'>
 #SGM {width:100%; height:300px;}
@@ -87,13 +91,16 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 		.ps-right-arrow:hover, .cs-next-arrow:hover, .cs-prev-arrow:hover, .ps-left-arrow:hover, 
 		.ps-right-arrow:hover {border-color:#257fb1;}.pg-info, .services-circle .services-content, .qg-overlay {background-color: rgba(37,127,177, 0.82);}
 </style>
-<!-- All in One SEO Pack 2.0.2 by Michael Torbert of Semper Fi Web Design[114,175] -->
-<meta name="description" content="Welcome to the Restore the Fourth SF website! To make a suggestion or become a contributor, send an email to restorefourSF@gmail.com. We hope to plan our" />
+<!-- All in One SEO Pack 2.0.2 by Michael Torbert of Semper Fi Web Design[114,168] -->
+<meta name="description" content="PGP Encryption taught by Will. Download GPG, Mozilla Thunderbird, and a plugin called Enigmail. PGP encryption was used by Glenn Greenwald and Snowden." />
 
+<meta name="keywords" content="encryption,sudoroom" />
+
+<link rel="canonical" href="http://restorethefourthsf.com/encryption-tips-email/" />
 <!-- /all in one seo pack -->
 
 </head>
-<body class="error404 fixed-header">
+<body class="single single-post postid-227 single-format-standard fixed-header">
 <div id="main-container" >
 	<div  class="page-wrapper" >
 		<!--HEADER -->
@@ -153,18 +160,58 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 
 <div id="content-container" class="content-boxed layout-right">
 <div id="content">
+<div id="post-227" class="post-227 post type-post status-publish format-standard hentry category-blogs tag-encryption tag-sudoroom blog-single-post theme-post-entry">
 
-<div class="aligncenter" id="not-found">
-<h1>404</h1>
-<h2>The requested page has not been found</h2>
-<div class="search-wrapper">
-  <form role="search" method="get" class="searchform" action="http://restorethefourthsf.com" >
-    <input type="text" name="s" class="search-input placeholder"  placeholder="Search" />
-<input type="submit" value="" class="search-button"/>
-  </form>
+
+<div class="post-content no-thumbnail">
+	<div class="post-title-wrapper">
+		<h2 class="post-title">
+		Encryption Tips: Email		</h2>
+
+	</div>
+	<div class="clear"></div>
+
+	<div class="post-content-content">
+
+	<div>
+<div>
+<p>PGP Encryption taught by Will.</p>
+<p>Download <strong>GPG, Mozilla Thunderbird, and a plugin called Enigmail</strong>. PGP encryption was used by Glenn Greenwald and Snowden. It works with a pair of keys, a private and a public key.</p>
+<p>Encryption is done by sequences of numbers, and you and your recipient have to share the same “cypher” for that. Simplest is Rot13, shift all the letters 13 spaces. And then you can change each letter by different increments, which creates much higher level of security. Then there&#8217;s “Asymmetric encryption” &#8211; this is our method, it uses two keys, private and public. <strong>Someone can write you an email that’s encrypted by public key and can only be decrypted with your private key.</strong> If you send an email to four people, it will be encrypted four times using their public keys.</p>
+<p>Here are the essential instructions:</p>
+<p>Once you have downloaded the two applications and the plugin, you will go to the Thunderbird menu, find OpenPGP and select “Key Management” and generate a key with a very secure passcode/password. (There’s a dialogue box regarding revocation certificates, you can do that or wait til later). You will right click on the key in the Key Management window, and upload it to all the listed servers. Then once you exchange keys with another person, when you create an email, you can select encrypt by clicking on the key on the bottom right hand corner.</p>
+<p>Additional security measures:</p>
+<p>The number one way to circumvent this form of encryption is to create a third party intermediary between you and the other person (&#8220;man in the middle&#8221;). First they replace your public key with their public key and then decrypt it, then recrypt it using your correct public key and send it to the true recipient. Therefore:</p>
+<ul>
+<li>You want your public key to be on many sites/in many places so that it can’t be replaced by someone else’s public key to get access to the communications. Use https websites.</li>
+<li>You want to right click on a user’s key and select key properties, and read out the “<strong>fingerprint</strong>” (a summary of the key) in person to verify that you have the correct public key. If one byte is changed in the public key, it gives a different fingerprint.</li>
+<li>What happens when private keys are compromised? “key revocation certificate” creates a centralized way to inform people not to use the public key.</li>
+</ul>
+<p>You can also use encryption to sign the email and even a recipient who does not have your public key will know it’s sent by you. That’s a separate feature.</p>
+<p>Multiple keys, and transitioning to new keys: You should begin to transition to new keys in advance, and use it to sign emails that are encrypted using the old key. Then, when you revoke the old key, people know that the new key is from the same person.</p>
 </div>
 </div>
-		
+		<div class="clear"></div>
+				<div class="clear"></div>
+	</div>
+</div>
+
+	<div class="post-info">
+		<span class="post-type-icon-wrap"><span class="post-type-icon"></span></span>
+					<span class="no-caps"> 
+				in			</span><a href="http://restorethefourthsf.com/category/blogs/" title="View all posts in Blog" rel="category tag">Blog</a>					<span class="no-caps post-autor">
+				&nbsp;by  <a href="http://restorethefourthsf.com/author/alice/" title="Posts by Alice" rel="author">Alice</a>			</span>
+					<span class="post-date">
+				01 Sep 2013			</span>
+					<span class="comments-number">
+				<a href="http://restorethefourthsf.com/encryption-tips-email/#comments">
+					0				<span class="no-caps">comments</span></a>
+			</span>
+			</div>
+
+	<div class="social-share"><div class="share-title">Share</div><ul><li title="Facebook" class="share-item share-fb" data-url="http://restorethefourthsf.com/encryption-tips-email/" data-type="facebook" data-title="Encryption Tips: Email"></li><li title="Twitter" class="share-item share-tw" data-url="http://restorethefourthsf.com/encryption-tips-email/" data-title="Encryption Tips: Email" data-type="twitter"></li><li title="Google+" class="share-item share-gp" data-url="http://restorethefourthsf.com/encryption-tips-email/" data-lang="en-US" data-title="Encryption Tips: Email" data-type="googlePlus"></li><li title="Pinterest" class="share-item share-pn" data-url="http://restorethefourthsf.com/encryption-tips-email/" data-title="Encryption Tips: Email" data-media="" data-type="pinterest"></li></ul></div><div class="clear"></div><span class="post-tags"><span class="post-tag-title">Post tags</span><a href="http://restorethefourthsf.com/tag/encryption/" rel="tag">Encryption</a><a href="http://restorethefourthsf.com/tag/sudoroom/" rel="tag">Sudoroom</a></span>
+<div class="clear"></div>
+</div>
 </div> <!-- end main content holder (#content/#full-width) -->
 	<div id="sidebar">		<div class="sidebar-box widget_recent_entries" id="recent-posts-2">		<h4 class="title">Recent Posts</h4>		<ul>
 					<li>
