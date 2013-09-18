@@ -26,6 +26,7 @@
 
 
 <link rel='stylesheet' id='events-manager-css'  href='http://RestoretheFourthSF.com/wp-content/plugins/events-manager/includes/css/events_manager.css?ver=5.51' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-fullcalendar-css'  href='http://RestoretheFourthSF.com/wp-content/plugins/wp-fullcalendar/includes/css/main.css?ver=3.5.2' type='text/css' media='all' />
 <link rel='stylesheet' id='pexeto-font-0-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700&#038;ver=3.5.2' type='text/css' media='all' />
 <link rel='stylesheet' id='pexeto-pretty-photo-css'  href='http://RestoretheFourthSF.com/wp-content/themes/mineral/css/prettyPhoto.css?ver=1.2.0' type='text/css' media='all' />
 <link rel='stylesheet' id='pexeto-stylesheet-css'  href='http://RestoretheFourthSF.com/wp-content/themes/mineral/style.css?ver=1.2.0' type='text/css' media='all' />
@@ -52,6 +53,12 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 /* ]]> */
 </script>
 <script type='text/javascript' src='http://RestoretheFourthSF.com/wp-content/plugins/events-manager/includes/js/events-manager.js?ver=5.51'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPFC = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpress\/wp-admin\/admin-ajax.php","firstDay":"1","wpfc_theme":"1","wpfc_limit":"3","wpfc_limit_txt":"more ...","wpfc_theme_css":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpress\/wp-content\/plugins\/wp-fullcalendar\/includes\/css\/ui-themes\/ui-lightness.css","wpfc_qtips":"1","wpfc_qtips_classes":"ui-tooltip-light ui-tooltip-shadow","wpfc_qtips_my":"top center","wpfc_qtips_at":"bottom center","wpfc_locale":{"firstDay":"1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://RestoretheFourthSF.com/wp-content/plugins/wp-fullcalendar/includes/js/main.js?ver=3.5.2'></script>
 
  
 
@@ -162,29 +169,13 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 
 	<div class="post-content-content">
 
-	<p>Here is a summary of some of the discussion at the EFF! Quotes are unattributed, sorry. https://wiki.openitp.org/doku.php?id=events%3Atechno-activism_3rd_mondays</p>
+	<p>Here is a summary of some of the discussion at the EFF! Quotes are unattributed, sorry. <a href="https://wiki.openitp.org/doku.php?id=events%3Atechno-activism_3rd_mondays">https://wiki.openitp.org/doku.php?id=events%3Atechno-activism_3rd_mondays</a></p>
 <p><strong>Threat Levels</strong></p>
 <p>We should distinguish between different threat levels because they require different levels of encryption security. We also have to be aware that the threat level only increases if your content is &#8220;worthwhile enough&#8221; so a way to avoid needing further encryption protection would be to avoid being noticed as worthwhile. The key to that is to hide metadata.</p>
 <p>The threat level concept eventually breaks down, however, because in order to communicate outside the secure group, you are immediately downgraded to &#8220;<span style="text-decoration: underline;">lowest common denominator</span>&#8221; encryption techniques.</p>
-<p>One goal could be to resist the <span style="text-decoration: underline;">chilling effect</span> of NSA surveillance. Encryption should be universally used, and always end to end, to prevent First Amendment issues.</p>
-<p>At the end of the day, though, the NSA always prefers passive attacks over active ones. Passive attaches are cheaper, less noticeable. End to end encryption is the way to protect from passive attacks. It might not protect against active attacks (targetting). SO we can FORCE the NSA to do active attacks, explicitly targeting a defined threat, by using encryption &#8211; trap them into fishing with a rod instead of a net.</p>
-<p>HTTPS is a part of end to end encryption and relying on it would kill some NSA data collection programs alone.</p>
-<p>Back to threat models, though &#8211; everyone is working with a different one. If by some unfortunate circumstance you are being <span style="text-decoration: underline;">ACTIVELY targeted</span> by the NSA, you just have to throw away all of your computers. And some people have done that. For us, that&#8217;s not necessary.</p>
-<p>If your threat model is &#8220;<span style="text-decoration: underline;">Ability to publis</span>h&#8221; and issues of censorship, let&#8217;s say in a country like Iran or Syria, it&#8217;s easier to protect you. The EFF software designers have a customer base of publishers in oppressive regimes. But we have to understand what the threats are, what techniques of surveillance and attack are being used, before we know what software we need to build. The EFF is 2-3 months away from producing this solution.</p>
-<p>Generally reduce your footprint to protect yourself as well, less data needs to be encrypted if less of it is available. Don&#8217;t necessarily throw away all your computers, but find a way to limit how much personal data is transmitted through them.</p>
-<p><strong>Foreign Government Surveillance</strong></p>
-<p>How are foreign governments acquiring surveillance technologies? They&#8217;re basically buying them off the shelf. They have no internal talent, it&#8217;s basically an <span style="text-decoration: underline;">arms trade</span>. Currently it&#8217;s so crude that the target can actually see what they are doing. They&#8217;re buying DDOS botnets for example, to target individual journalists, or hiring freelance hackers to create malware.</p>
-<p>The surveillance systems that are for sale will become more and more sophisticated and harder to detect. And internationally there is almost no structural protection against this tool. We&#8217;re actually a LOT safer in the US because we even have these privacy laws in the first place.</p>
-<p>These <span style="text-decoration: underline;">off-the-shelf surveillance products</span> are a justification for the NSA activity. The US government&#8217;s optimal position is to make sure no foreign governments can surveil their citizenry, but that they have full access. Therefore, their technology must be infinitely superior to whats available elswhere. They need an assymetry betwen what the US can do and what our enemies can do. That&#8217;s the justification. Only the US government can invade the privacy of US citizens, esentially.</p>
-<p>&#8220;<span style="text-decoration: underline;">Data at rest</span>&#8221; questions &#8211; once the data is stored on a server that&#8217;s a security issue too. Passive data collection requires data on the move. But data at rest is much more protected in the US than elsewhere. That&#8217;s why PRISM ignited fear globally.</p>
-<p>How do the laws work in other countries? Caroline uses <span style="text-decoration: underline;">GCHQ</span> in Britain as an example. They claim the right to access any data that travels through underseas cables under &#8220;RIPA&#8221; law. It&#8217;s irrelevant who sent or received it, even if it&#8217;s an entirely domestic communication it might still bounce to these underseas cables.  That&#8217;s less protection than in the US, at least FISA appears to require one end be outside the US, and even US citizens outside the US have some protections.</p>
-<p><strong>Using v. Collecting</strong></p>
-<p>One question is, how are they using this data? Isn&#8217;t that what we&#8217;re really worried about? Even the collection of the data is unconstitutional, none of the constraints that the fourth amendment is interpreted to provide apply to collection at all. Restore the Fourth&#8217;s resolution, for example, is solely about collection &#8211; it&#8217;s also very hard to prove that the data is being used. Efficiency suggests that the use is in fact limited to targets in some way. But there are no good examples yet &#8211; it would expose NSA&#8217;s capabilities if they admitted where they got the  evidence. So for example the DEA will construct <span style="text-decoration: underline;">a second chain of evidence</span> afterwards.</p>
-<p>Use in a civil subpoena context? The ECPA prevents private companies from giving out more than just the basic IP address type information. Also, they might not provide the data because it&#8217;s a hassle.</p>
-<p><strong>An Aside</strong>: Look into the<a href="http://en.wikipedia.org/wiki/Perfect_forward_secrecy" target="_blank"> forward security protection </a>technique. This involves using different keys for every communication and then destroying them after the communication has been read. Like a digital &#8220;&#8216;burn after reading.&#8221;</p>
-<p>&nbsp;</p>
 		<div class="clear"></div>
-				<div class="clear"></div>
+		 <a href="http://RestoretheFourthSF.com/technoactivism-third-mondays-at-the-eff/" class="read-more">Read More<span class="more-arrow">&rsaquo;</span></a>
+					<div class="clear"></div>
 	</div>
 </div>
 
@@ -285,17 +276,11 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 	<div>
 <div>
 <p>Bob asked me to share his writeup of the cell phone class:</p>
-<p>I sat in on the android phone security break out group. To keep it simple, I&#8217;ll just say a little bit about the apps for secure text and voice. They are both pretty easy to install and use</p>
-<p>For text messages go to the App Store and download Text Secure, setup is easy, follow the prompts. Once you have exchanged a key with someone also using it, every text you send them will be encrypted. Easiest way to verify each other is in person of course, it basically sends each person a hash tag, you can do this remotely but always easier and better to do when you are together. Using this app basically overrides your standard text client, any text you send will look for the recipient also using it. If they aren&#8217;t , no biggie. It then is just a standard text. Once set up, it is completely transparent to the user.</p>
-<p>Encrypted voice calls:</p>
-<p>Download the Red Phone app, simple to set up, again follow the prompts This works a little differently in use, it generates a one time key between the parties based on a 2 word pass phrase. Basically if you call someone also using red phone, you will each see a pass phrase, just say the phrase at the beginning of the call and then you are encrypted Again, pretty easy to use&#8230; Oh, one of the devs was there and I asked him about VoIP and yes, this works on that too. So if you use google voice or Skype, your voice calls will still be encrypted .</p>
-<p>Both of these apps are from whisper net and free to use.</p>
-<p>Oh, we did talk a bit about encrypting all of your phones data as well. Go to settings/security/encrypt device, follow the prompts. Encrypting all of your phones data will take some time, be sure you are plugged in to your charger</p>
-<p>Also discussed password security for your phone, it&#8217;s kind of a balance there&#8230; Sure, a 40 character password is more secure but who wants to type that in every time you want to unlock your phone You should have one but its up to you how hard you want to make it for yourself</p>
-</div>
+<p>I sat in on the android phone security break out group. To keep it simple, I&#8217;ll just say a little bit about the apps for secure text and voice. They are both pretty easy to install and use.</p></div>
 </div>
 		<div class="clear"></div>
-				<div class="clear"></div>
+		 <a href="http://RestoretheFourthSF.com/encryption-tips-text-messages/" class="read-more">Read More<span class="more-arrow">&rsaquo;</span></a>
+					<div class="clear"></div>
 	</div>
 </div>
 
@@ -329,22 +314,11 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 <div>
 <p>PGP Encryption taught by Will.</p>
 <p>Download <strong>GPG, Mozilla Thunderbird, and a plugin called Enigmail</strong>. PGP encryption was used by Glenn Greenwald and Snowden. It works with a pair of keys, a private and a public key.</p>
-<p>Encryption is done by sequences of numbers, and you and your recipient have to share the same “cypher” for that. Simplest is Rot13, shift all the letters 13 spaces. And then you can change each letter by different increments, which creates much higher level of security. Then there&#8217;s “Asymmetric encryption” &#8211; this is our method, it uses two keys, private and public. <strong>Someone can write you an email that’s encrypted by public key and can only be decrypted with your private key.</strong> If you send an email to four people, it will be encrypted four times using their public keys.</p>
-<p>Here are the essential instructions:</p>
-<p>Once you have downloaded the two applications and the plugin, you will go to the Thunderbird menu, find OpenPGP and select “Key Management” and generate a key with a very secure passcode/password. (There’s a dialogue box regarding revocation certificates, you can do that or wait til later). You will right click on the key in the Key Management window, and upload it to all the listed servers. Then once you exchange keys with another person, when you create an email, you can select encrypt by clicking on the key on the bottom right hand corner.</p>
-<p>Additional security measures:</p>
-<p>The number one way to circumvent this form of encryption is to create a third party intermediary between you and the other person (&#8220;man in the middle&#8221;). First they replace your public key with their public key and then decrypt it, then recrypt it using your correct public key and send it to the true recipient. Therefore:</p>
-<ul>
-<li>You want your public key to be on many sites/in many places so that it can’t be replaced by someone else’s public key to get access to the communications. Use https websites.</li>
-<li>You want to right click on a user’s key and select key properties, and read out the “<strong>fingerprint</strong>” (a summary of the key) in person to verify that you have the correct public key. If one byte is changed in the public key, it gives a different fingerprint.</li>
-<li>What happens when private keys are compromised? “key revocation certificate” creates a centralized way to inform people not to use the public key.</li>
-</ul>
-<p>You can also use encryption to sign the email and even a recipient who does not have your public key will know it’s sent by you. That’s a separate feature.</p>
-<p>Multiple keys, and transitioning to new keys: You should begin to transition to new keys in advance, and use it to sign emails that are encrypted using the old key. Then, when you revoke the old key, people know that the new key is from the same person.</p>
-</div>
+<p>Encryption is done by sequences of numbers, and you and your recipient have to share the same “cypher” for that. Simplest is Rot13, shift all the letters 13 spaces. And then you can change each letter by different increments, which creates much higher level of security. Then there&#8217;s “Asymmetric encryption” &#8211; this is our method, it uses two keys, private and public. <strong>Someone can write you an email that’s encrypted by public key and can only be decrypted with your private key.</strong> If you send an email to four people, it will be encrypted four times using their public keys.</div>
 </div>
 		<div class="clear"></div>
-				<div class="clear"></div>
+		 <a href="http://RestoretheFourthSF.com/encryption-tips-email/" class="read-more">Read More<span class="more-arrow">&rsaquo;</span></a>
+					<div class="clear"></div>
 	</div>
 </div>
 
@@ -375,12 +349,9 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 	<div class="post-content-content">
 
 	<p>The Public School/Sudoroom are located in a community space that’s open to all. They hosted a series of short talks.</p>
-<p><strong>Big Data</strong> talk, we no longer need to process data before storing it because the storage is so cheap, that’s a sea change – just store it all and figure it out later when the technology to process it is available. Loading and unloading can be the most limiting factor/it’s a bottleneck. SO you want that storage to be the analytic platform reducing loading and unloading. Microsegmentation becomes possible. Predictive analytics and machine learning is the new way to find insider trading because it’s so cutting edge. Data is never thrown away so they can always rerun the algorithms.</p>
-<p><strong>DAC</strong> in Oakland, an organization hosted a walking tour. Economic reasons drove these decisions, we always should ask what is the economic result? Target is poor people and people of color, how does it impact those populations. More than just cameras &#8211; digital data as well, overlay maps with people watching the feeds. And shared with the Fusion centers. Voho mobile phone system to map surveillance via mms. Send photos to <a href="mailto:icu@vojo.co" target="_blank">icu@vojo.co</a> with %[address]. <a href="http://vojo.co/icu" target="_blank">http://vojo.co/icu</a></p>
-<p><strong>East Bay Mesh</strong> (presented by Sudoroom’s Jenny &amp; colleague). Big local network of wifis talking together. Community owned infrastructure. Buy a wifi router and replace the operating system with theirs, install mesh protocol batman. Connection to internet is the complicated part. <a href="http://en.wikipedia.org/wiki/B.A.T.M.A.N" target="_blank">http://en.wikipedia.org/wiki/B.A.T.M.A.N</a>. not Tor but uses something related. Relay nodes, exit notes, these hide your source IP so that you don’t become liable for mesh use of your internet. OpenWRT is the router operating system, Batman advanced protocol. Creating the 501(c)(3). Looking for volunteers, doing classes and workshops, you can help out on Thursday nights. Network is separate from the nonprofit, they’re helping support nodes, and then peering agreements for self-supported ones. Raised money for first 100 nodes (routers and antennas). Meshmap.sudoroom.org to map antennas. IRC: Freenode #510pen. How do we connect Oakland and SF? Internet connection to SF using dark fiber, they are talking to Internet Archive about doing this.</p>
-<p><strong>Security Activism</strong> from Danny O’Brien, example is the cryptoparty earlier in the day. Security activism is what allows other forms of activism to exist &#8211; they all rely on privacy. Digital security politics: the history. They know everything and you know nothing. Digital security is personal, technological and political. They’re all interrelated. Danny is the international director. They’re using their experience from copyright to chart the progress of the surveillance debate. What can we do, hit above our weight, coalitions. Technological solutions. Personal feedback loops to show you have succeeded helped with copyright, and there’s no feedback from combatting surveillance. There are no visuals either. And the NSA is much worse as an enemy than the RIAA. We’re fighting for other people, so encryption isn’t helping them. NSA&#8217;s secrecy might be their downfall, we have the advantage of openness. Private ownership of data is important.</p>
 		<div class="clear"></div>
-				<div class="clear"></div>
+		 <a href="http://RestoretheFourthSF.com/lightning-talks-at-the-public-school/" class="read-more">Read More<span class="more-arrow">&rsaquo;</span></a>
+					<div class="clear"></div>
 	</div>
 </div>
 
@@ -667,6 +638,9 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 </div> <!-- end main content holder (#content/#full-width) -->
 	<div id="sidebar">		<div class="sidebar-box widget_recent_entries" id="recent-posts-2">		<h4 class="title">Recent Posts</h4>		<ul>
 					<li>
+				<a href="http://RestoretheFourthSF.com/visiting-pelosis-office/" title="Visiting Pelosi&#8217;s Office">Visiting Pelosi&#8217;s Office</a>
+						</li>
+					<li>
 				<a href="http://RestoretheFourthSF.com/technoactivism-third-mondays-at-the-eff/" title="Technoactivism Third Mondays at the EFF">Technoactivism Third Mondays at the EFF</a>
 						</li>
 					<li>
@@ -678,11 +652,23 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 					<li>
 				<a href="http://RestoretheFourthSF.com/san-francisco-restore-the-fourth-protest-video-documentary-july-4-2013/" title="San Francisco Restore the Fourth Protest Video Documentary &#8211; July 4, 2013">San Francisco Restore the Fourth Protest Video Documentary &#8211; July 4, 2013</a>
 						</li>
-					<li>
-				<a href="http://RestoretheFourthSF.com/website-goes-live/" title="Website Goes Live">Website Goes Live</a>
-						</li>
 				</ul>
-		</div><div class="sidebar-box widget_em_widget" id="em_widget-2"><h4 class="title">Events</h4><ul><li>No events</li></ul></div></div>
+		</div><div class="sidebar-box widget_em_widget" id="em_widget-2"><h4 class="title">Events</h4><ul><li>No events</li></ul></div><div class="sidebar-box widget_tag_cloud" id="tag_cloud-2"><h4 class="title">Tags</h4><div class="tagcloud"><a href='http://RestoretheFourthSF.com/tag/bos/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>Board of Supervisors</a>
+<a href='http://RestoretheFourthSF.com/tag/city-council-project/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>city council project</a>
+<a href='http://RestoretheFourthSF.com/tag/dac/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>DAC</a>
+<a href='http://RestoretheFourthSF.com/tag/eff/' class='tag-link-29' title='2 topics' style='font-size: 14.3pt;'>EFF</a>
+<a href='http://RestoretheFourthSF.com/tag/encryption/' class='tag-link-27' title='4 topics' style='font-size: 22pt;'>Encryption</a>
+<a href='http://RestoretheFourthSF.com/tag/july-4/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>July 4</a>
+<a href='http://RestoretheFourthSF.com/tag/meshnets/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>Meshnets</a>
+<a href='http://RestoretheFourthSF.com/tag/minutes/' class='tag-link-21' title='2 topics' style='font-size: 14.3pt;'>Minutes</a>
+<a href='http://RestoretheFourthSF.com/tag/national-organization/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>National Organization</a>
+<a href='http://RestoretheFourthSF.com/tag/openstrategymeetings/' class='tag-link-23' title='2 topics' style='font-size: 14.3pt;'>Open Strategy Meetings</a>
+<a href='http://RestoretheFourthSF.com/tag/organizationews/' class='tag-link-22' title='2 topics' style='font-size: 14.3pt;'>Organization News</a>
+<a href='http://RestoretheFourthSF.com/tag/rally/' class='tag-link-9' title='3 topics' style='font-size: 18.5pt;'>Rally</a>
+<a href='http://RestoretheFourthSF.com/tag/sudoroom/' class='tag-link-31' title='3 topics' style='font-size: 18.5pt;'>Sudoroom</a>
+<a href='http://RestoretheFourthSF.com/tag/thompson/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Thompson</a>
+<a href='http://RestoretheFourthSF.com/tag/video/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>Video</a></div>
+</div></div>
 <div class="clear"></div>
 </div> <!-- end #content-container -->
 </div>
@@ -701,6 +687,9 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 		<div class="cols-wrapper footer-widgets section-boxed cols-3">
 	<div class="col">		<div class="footer-box widget_recent_entries" id="recent-posts-4">		<h4 class="title">Recent Posts</h4>		<ul>
 					<li>
+				<a href="http://RestoretheFourthSF.com/visiting-pelosis-office/" title="Visiting Pelosi&#8217;s Office">Visiting Pelosi&#8217;s Office</a>
+						</li>
+					<li>
 				<a href="http://RestoretheFourthSF.com/technoactivism-third-mondays-at-the-eff/" title="Technoactivism Third Mondays at the EFF">Technoactivism Third Mondays at the EFF</a>
 						</li>
 					<li>
@@ -711,9 +700,6 @@ var EM = {"ajaxurl":"http:\/\/ec2-54-227-165-222.compute-1.amazonaws.com\/wordpr
 						</li>
 					<li>
 				<a href="http://RestoretheFourthSF.com/san-francisco-restore-the-fourth-protest-video-documentary-july-4-2013/" title="San Francisco Restore the Fourth Protest Video Documentary &#8211; July 4, 2013">San Francisco Restore the Fourth Protest Video Documentary &#8211; July 4, 2013</a>
-						</li>
-					<li>
-				<a href="http://RestoretheFourthSF.com/website-goes-live/" title="Website Goes Live">Website Goes Live</a>
 						</li>
 				</ul>
 		</div></div><div class="col"><div class="footer-box posts_multi" id="portfolio-posts-multi-2"><h4 class="title">Latest Projects</h4> <ul class="portfolio-items-widget">
