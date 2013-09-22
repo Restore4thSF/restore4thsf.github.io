@@ -385,3 +385,7 @@ border-radius: 0;
 .pexeto-dialog .small-field .pex-upload-wrapper{
 	width: 100%;
 }
+
+.pexeto-dialog ~ .ui-widget-overlay, .pexeto-dialog ~ .ui-dialog{
+	z-index:10000000000;
+}

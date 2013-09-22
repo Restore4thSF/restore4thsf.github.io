@@ -147,3 +147,7 @@ input[type="submit"].search-button{
 .more-arrow{
 	border-width: 0;
 }
+
+.cs-element{
+  filter: alpha(opacity=0);
+}

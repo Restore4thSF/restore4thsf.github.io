@@ -1,3 +1,10 @@
+function onYouTubeIframeAPIReady(){
+	if(PEXETO.pendingVideoFunction){
+		PEXETO.pendingVideoFunction.call();
+	}
+}
+
+
 /**
  * This is the script for the content slider - it slides between different slides with
  * different animation. Each slide is composed of two sections and each of this section
@@ -62,7 +69,13 @@
 			$oldBgImage = null,
 			defaultBg = '#777777',
 			isIe8 = PEXETO.getBrowser().msie && PEXETO.getBrowser().version<=8,
-			loadProgress = 0;
+			loadProgress = 0,
+			videoId = 0,
+			videoPlaying = false,
+			videoLoading = false,
+			pendingVideoFunction = null,
+			mouseIn = false,
+			supportsTransition = PEXETO.utils.supportsTransition();
 
 		$root = $(this);
 		$parent = $root.parent();
@@ -99,6 +112,10 @@
 				if($li.data('bg_color')){
 					slides[i].bgColor = $li.data('bg_color');
 					$parent.css({backgroundColor:slides[i].bgColor});
+				}
+
+				if($li.data('video')){
+					slides[i].video = $li.data('video');
 				}
 
 			}).length;
@@ -203,9 +220,11 @@
 
 			if(o.arrows) {
 				$prevArrow.on('click', function() {
+					mouseIn = true;
 					doOnArrowClick(false);
 				});
 				$nextArrow.on('click', function() {
+					mouseIn = true;
 					doOnArrowClick(true);
 				});
 			}
@@ -319,6 +338,7 @@
 			if(o.autoplay && o.pauseOnHover) {
 				//pause the animation
 				stopAnimation();
+				mouseIn = true;
 			}
 		}
 
@@ -336,6 +356,7 @@
 
 			if(o.autoplay && o.pauseOnHover) {
 				//resume the animation
+				mouseIn = false;
 				startAnimation();
 			}
 		}
@@ -390,6 +411,10 @@
 					$box.find('.cs-element').removeClass('cs-animate');
 				};
 
+			if(slide.video){
+				hideVideo(slide);
+			}
+
 
 			//hide the first box
 			hideInnerElements($firstBox, function(){
@@ -418,10 +443,14 @@
 			var $elements = $box.find('.cs-element');
 			$elements.css({opacity:0});
 			if(callback){
-				$elements.last().on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(){
+				if(supportsTransition){
+					$elements.last().on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(){
+						callback.call();
+						$(this).off('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd');
+					});
+				}else{
 					callback.call();
-					$(this).off('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd');
-				});
+				}
 			}
 		}
 
@@ -452,7 +481,13 @@
 				$secondBox = slide.secondBox,
 				lastBox = true;
 
+
+			videoPlaying = false;
 			slide.li.show();
+
+			if(slide.video){
+				initVideo(slide);
+			}
 			
 
 			setSliderHeight(index);
@@ -500,6 +535,56 @@
 				})()
 			).done(function(){
 				setEndAnimation();
+			});
+		}
+
+		function initVideo (slide) {
+			videoLoading = true;
+			pause();
+
+			var videoElId = 'video-'+(videoId++),
+				initElVideo = function(){
+					var player = new YT.Player(videoElId, {
+			          height: '100%',
+			          width: '100%',
+			          videoId: slide.video,
+			          events: {
+			            'onReady': function(){
+							slide.$videoWrap
+								.animate({opacity:1}, 700)
+								.parent().removeClass('loading');
+							videoLoading = false;
+							startAnimation();
+
+							
+			            },
+			            'onStateChange': function(event){
+							if (event.data == YT.PlayerState.PLAYING) {
+								stopAnimation();
+								videoPlaying = true;
+							}
+			            }
+			          }
+			        });
+
+					PEXETO.init.ieIframeFix(); //fix the iframe z-index bug on IE
+
+				};
+
+			slide.$videoWrap = slide.li.find('.cs-video:first').css({opacity:0});
+			$('<div />', {'id':videoElId}).appendTo(slide.$videoWrap);
+			slide.$videoWrap.parent().addClass('loading');
+
+			if(window.YT && window.YT.Player){
+				initElVideo();
+			}else{
+				PEXETO.pendingVideoFunction = initElVideo;
+			}
+		}
+
+		function hideVideo(slide){
+			slide.$videoWrap.animate({opacity:0}, function(){
+				slide.$videoWrap.empty();
 			});
 		}
 
@@ -572,7 +657,11 @@
 		 */
 
 		function startAnimation() {
-			if(o.autoplay && stopped) {
+			if(o.autoplay && stopped && !videoPlaying) {
+				if(o.pauseOnHover && mouseIn){
+					//the mouse is still within the container
+					return;
+				}
 				stopped = false;
 				timer = window.setInterval(callNextSlide, o.animationInterval);
 			}
@@ -591,8 +680,10 @@
 		 */
 
 		function callNextSlide() {
-			var nextIndex = (currentIndex < itemNum - 1) ? (currentIndex + 1) : 0;
-			changeSlide(nextIndex);
+			if(!videoLoading){
+				var nextIndex = (currentIndex < itemNum - 1) ? (currentIndex + 1) : 0;
+				changeSlide(nextIndex);
+			}
 		}
 
 		/**

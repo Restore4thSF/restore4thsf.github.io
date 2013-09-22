@@ -249,7 +249,7 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 
 			columns = Math.floor(($container.width() - o.itemMargin) / (o.minItemWidth + o.itemMargin));
 
-			if(columns === 1) {
+			if(columns <= 1) {
 				columns = 2;
 			}
 			itemWidth = Math.floor(($container.width() + o.itemMargin - 2 * o.shadowWidth) / columns) - o.itemMargin;
@@ -336,11 +336,13 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 		 * On next slide event handler - shows the next slide if there is one.
 		 */
 		function doOnNextSlide() {
-			if(!isLastPageVisible()) {
-				var index = currentPage < pageNumber - 1 ? currentPage + 1 : 0;
-				changeSlide(index);
-			} else {
-				animateLastPage(true);
+			if(!inAnimation){
+				if(!isLastPageVisible()) {
+					var index = currentPage < pageNumber - 1 ? currentPage + 1 : 0;
+					changeSlide(index);
+				} else {
+					animateLastPage(true);
+				}
 			}
 		}
 
@@ -349,10 +351,12 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 		 * is one.
 		 */
 		function doOnPreviousSlide() {
-			if(currentPage > 0) {
-				changeSlide(currentPage - 1);
-			} else {
-				animateLastPage(false);
+			if(!inAnimation){
+				if(currentPage > 0) {
+					changeSlide(currentPage - 1);
+				} else {
+					animateLastPage(false);
+				}
 			}
 		}
 
@@ -2262,8 +2266,21 @@ var PEXETO = PEXETO || {};
 
 				self.$img.css({left:left});
 			}
+	};
 
-		
+
+
+
+	PEXETO.utils.supportsTransition = function(){
+		if(PEXETO.supportsTransition !== undefined){
+			return PEXETO.supportsTransition;
+		}
+
+		var b = document.body || document.documentElement,
+        s = b.style,
+        support = s.transition !== undefined || s.WebkitTransition !== undefined || s.MozTransition !== undefined || s.MsTransition !== undefined || s.OTransition !== undefined;
+   		PEXETO.supportsTransition = support;
+   		return support;
 	};
 
 }(jQuery));

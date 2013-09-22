@@ -297,7 +297,10 @@ PEXETO.tinymce.buttons=[
 					{id:'crop', name:'Automatic image cropping', values:['enabled', 'disabled'], twocolumn:'last'},
 					{type:'subtitle', name:'Optional'},
 					{id:'title', name:'Services Title'},
-					{id:'desc', name:'Services Description', textarea:true}],
+					{id:'desc', name:'Services Description', textarea:true},
+					{id:'btnlink', name:'Description Link URL', twocolumn:'first'},
+					{id:'btntext', name:'Description Link Text', twocolumn:'last'}
+					],
 			visual:{'shortcode':'pexservices', img:PEXETO.tinymce.btnImageUri+'bg.png'},
 			generateHtml:function(obj){
 				return PEXETO.tinymce.buildShortcode(obj, this.fields, this.visual.shortcode);

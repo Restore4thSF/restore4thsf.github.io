@@ -102,6 +102,7 @@ return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.js
 				video = true;
 
 				$root.trigger("sliderLoaded");
+				PEXETO.init.ieIframeFix();
 
 			} else {
 				//it's an image slider, load the images
@@ -127,6 +128,9 @@ return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.js
 			img = new Image();
 			img.setAttribute("src", images[0].img);
 			$img = $(img);
+			if(images[0]['alt']){
+				$img.attr('alt', images[0]['alt']);
+			}
 			images[0].el = $img;
 
 			$mediaContainer.append($img, false);
@@ -210,6 +214,9 @@ return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.js
 				if(!images[i].loaded) {
 					image = new Image();
 					image.setAttribute("src", images[i].img);
+					if(images[i]['alt']){
+						image.setAttribute('alt', images[i]['alt']);
+					}
 
 					(function(i) {
 						images[i].el = $(image).imagesLoaded(function() {

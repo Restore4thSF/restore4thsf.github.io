@@ -384,3 +384,9 @@ html* .upload-button{  /* IE7 only */
   width: auto;
 }
 
+.custom-desc {
+    color: #999999;
+    font-family: Georgia;
+    font-style: italic;
+}
+
