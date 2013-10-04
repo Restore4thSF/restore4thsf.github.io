@@ -4,6 +4,18 @@
 <?xml-stylesheet type="text/xsl" href="http://restorethefourthsf.com/wp-content/plugins/all-in-one-seo-pack/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<lastmod>2013-10-03T23:00:33Z</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.9</priority>
+		<loc>http://restorethefourthsf.com/sb467/</loc>
+	</url>
+	<url>
+		<lastmod>2013-10-02T13:13:27Z</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.9</priority>
+		<loc>http://restorethefourthsf.com/events/restore-the-fourth-bay-area-penninsula-chapter-meeting/</loc>
+	</url>
+	<url>
 		<lastmod>2013-10-01T02:47:01Z</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.9</priority>
