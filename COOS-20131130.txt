@@ -1,10 +1,16 @@
-COOS Call Sat. 20131130 4-6PM Outline last updated 20131130 1043 PST
 
-- - ----------------------------
+- ----------------------------
 *Communication*
-- - ----------------------------
-- - -current platforms
+- ----------------------------
+An analysis of our current platforms and tools in use. Security. It is understood among the Engineers, Technologists, Computer Scientists associated with RT4SF that the it would be ideal for our collaborative online tools be owned by RT4SF members, on private, non-cloud servers. Zaki has been working on a xmpp/OTR chat infrastructure which would make it possible for members to communicate with the group from desktops, laptops, tablets and cell phones.
 
+how to reach all demographics: age, race, class, gender, transpartisan
+
+A dialog about how to create workflow to message members privately
+A dialog about how to create workflow to message members and non-members publicly
+Using automation to push messages to platforms
+
+- -current platforms
     facebook
     website
     email - mailing list
@@ -16,22 +22,17 @@ COOS Call Sat. 20131130 4-6PM Outline last updated 20131130 1043 PST
         Windows
 
     land lines
+        call trees (automated?)
 
-        call trees
-
-- - -hardening platforms
-
+- -hardening platforms
+    *Zaki and team are hardening website
     *curriculum for individuals to harden their comms
     *outreach activity - RT4 teams that harden comms on the spot while
-getting acquainted with potential, new members
+      getting acquainted with potential, new members
 
-- - -collaborative tools
-
+- -collaborative tools
     meetups (face-2-face)
     conference calls
-    existing platforms:
-    -https://help.riseup.net/es
-    -https://www.autistici.org/en/index.html
     xmpp OTR
     encrypted, untraceable website comments
     mindmeister
@@ -41,58 +42,50 @@ getting acquainted with potential, new members
     contact lists
     petition signing
 
-- - -media
-
-    -traditional
-
+- -media
+    traditional
         print, radio, TV
 
-    -independent
-
+    independent
         weeklies, blogs
 
-    -social media
-
+    social media
         twitter, facebook, ...
 
-- - -issues
+- -issues
 
-- - ------------------
+- ------------------
 *Outreach*
-- - ------------------
-- - -how is good will created within RT4SF and outside among potential
+- ------------------
+- -how is good will created within RT4SF and outside among potential
 affiliates, coalition?
-- - -how is good will destroyed?
-- - -understanding vast personal responsibilities, limited time to contribute
+- -how is good will destroyed?
+- -understanding vast personal responsibilities, limited time to contribute
+     designing productive, meaningful activities that members are able
+     to work into their lives
+- -facebook group members - how to move them onto secure, collaborative
+ platforms, participation
+- -flyering, tabling, canvassing - volunteer teams, calendar & map, coverage
+- -fundraising
 
-    -designing productive, meaningful activities that members are able
-to work into their lives
-
-- - -facebook group members - how to move them onto secure, collaborative
-platforms, participation
-- - -flyering, tabling, canvassing - volunteer teams, calendar & map, coverage
-- - -fundraising
-
-- - -----------------------
+- -----------------------
 *Organization*
-- - -----------------------
-- - -vertical (centralized & silo-ed) not so good. horizontal: focused and
-distributed better
-- - -frustration around lack of participation
-- - -increasing lead time on projects
-- - -dousing fire drills
-- - -current projects
-
-    frustration with lack of minds working the problem
-
-- - -delegation
-- - -coalition map - national & local
-
-    other "Rights" Groups
-
-- - -leadership
-- - -accountability
-- - -project creation & management
-
+- -----------------------
+- -what kind of org does RT4SF want to be?
+- -vertical (centralized & silo-ed) -- not so good.
+- -horizontal: focused and distributed -- better
+- -frustration around lack of participation
+- -issues with project creation & management
+    secure, accessible repository for project files
+    public, accessible repository for project files
     resource acquisition - free, paid
-    funds
+    fundraising?
+    current projects-identify
+    frustration with lack of minds working the problem
+    increasing lead time on projects
+    dousing fire drills
+- -delegation
+- -coalition map - national & local
+    other "Rights" Groups
+- -leadership
+- -accountability
