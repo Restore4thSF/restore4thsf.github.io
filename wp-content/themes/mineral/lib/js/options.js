@@ -37,7 +37,8 @@
 		_create: function() {
 			this.optionsData = {};
 
-			_.bindAll(this);
+			_.bindAll(this, 'init','loadOptionsData','_bindEventHandlers','_getInputValue',
+				'_doOnElementChange','destroy','getOptionsData','doOnSave');
 			this.init();
 		},
 
@@ -258,7 +259,13 @@
 		 * Creates the widget. Initializes some variables.
 		 */
 		_create: function() {
-			_.bindAll(this);
+			_.bindAll(this, 'init','_buildMarkup','_bindEventHandlers',
+				'_setInitValues','_doOnAddClick','_resetForm','_doOnSort',
+				'_triggerChange','_updateBoundElements','_getInputValue',
+				'_setEmptyFieldValue','_addListElement','_doOnDelete',
+				'_doOnEdit','_doOnEditComplete','_validateInput',
+				'_doOnElementMouseenter','_doOnInputFocusIn','_escapeHTML',
+				'_getFieldById','getValues','destroy');
 
 			this.values = [];
 			this.id = this.element.attr('id');
@@ -789,7 +796,8 @@
 		 * Creates the widget, initializes some variables.
 		 */
 		_create: function() {
-			_.bindAll(this);
+			_.bindAll(this, 'init','_bindEventHandlers','showMainTab','showSubTab',
+				'setCookie','getCookie','_getSelectedElements','destroy');
 
 			//init the main properties of the object
 			this.mainTabs = null;

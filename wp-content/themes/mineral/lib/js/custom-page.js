@@ -273,7 +273,6 @@
 				modal: true,
 				title:'Delete Item',
 				dialogClass:'pexeto-dialog',
-				height:160,
 				buttons: {
 					"Delete": function() {
 						//delete confirmed
@@ -480,7 +479,6 @@
 			$('<div>'+options.deleteSliderMsg+'</br><div class="loading"></div></div>').dialog({
 				modal: true,
 				title:'Delete Slider',
-				height:180,
 				dialogClass:'pexeto-dialog',
 				buttons: {
 					"Delete": function() {

@@ -30,7 +30,7 @@
 		},
 
 		_create : function(){
-			_.bindAll(this);  
+			_.bindAll(this, 'init', 'setFieldsVisibility');  
 			this.init();
 		},
 
@@ -80,11 +80,11 @@
 				if(selectedTemplate){
 					this.element.find(o.optionSel+","+o.headingSel).each($.proxy(function(i, el){
 						var $el = $(el),
-							templates = $el.data("template") ? $el.data("template").split(",") : false,
+							templates = $el.data("template") ? $el.data("template").split(",") : [],
 							contains = _.find(templates, function(template){
 								return template===selectedTemplate;
 							}),
-							display = (contains || !templates) ? "block" : "none";
+							display = (contains || !templates.length) ? "block" : "none";
 
 						$el.css({display:display});
 

@@ -281,38 +281,40 @@ h2.page-heading {
 
 /* --------------------- BULLETS --------------------- */
 
-.imglist li{
-	list-style: none;
-	padding: 0px;
-	margin: 7px;
-	line-height: 18px;
-	padding-left: 15px;
-	background: url(../../images/list-sprites.png);
-	background-size: 10px;
-	background-position: left center;
-	background-repeat: no-repeat;
+.imglist {
+  list-style: none;
 }
-
-.bullet_star li{
-		background-position: 0px 5px;
+.imglist li:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 7px;
+  line-height: 18px;
+  padding-left: 15px;
+  background: url(../../images/list-sprites.png);
+  background-size: 10px;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
-
-.bullet_check li {
-	background-position: 0px -15px;
+.bullet_star li:before {
+  background-position: 0 5px;
 }
-.bullet_plus li {
-		background-position: 0px -34px;
+.bullet_check li:before {
+  background-position: 0 -15px;
 }
-.bullet_arrow li {
-		background-position: 0px -55px;
+.bullet_plus li:before {
+  background-position: 0 -36px;
 }
-
-.bullet_arrow2 li {
-		background-position: 0px -76px;
+.bullet_arrow li:before {
+  background-position: 0 -55px;
 }
-
-.bullet_arrow4 li {
-		background-position: 0px -95px;
+.bullet_arrow2 li:before {
+  background-position: 0 -76px;
+}
+.bullet_arrow4 li:before {
+  background-position: 0 -96px;
 }
 
 .section-boxed{

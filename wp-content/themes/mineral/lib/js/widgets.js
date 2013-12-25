@@ -44,7 +44,7 @@
 			 * Dfault create function executed when the widget is initialized.
 			 */
 			_create: function() {
-				_.bindAll(this);
+				_.bindAll(this, 'init', '_doOnClick');
 				this.init();
 			},
 
@@ -101,7 +101,7 @@
 			 * Dfault create function executed when the widget is initialized.
 			 */
 			_create: function() {
-				_.bindAll(this);
+				_.bindAll(this, 'init', '_doOnClick', 'getValue', 'destroy');
 				this.val = null;
 				this.init();
 			},
@@ -190,7 +190,8 @@
 			 * Default create function executed when the widget is initialized.
 			 */
 			_create: function() {
-				_.bindAll(this);
+				_.bindAll(this, 'init', '_doOnSubmit', '_doOnBeforeShow', 
+					'destroy', 'updatePreviewColor');
 				this.init();
 			},
 
@@ -290,7 +291,8 @@
 			 * Default create function executed when the widget is initialized.
 			 */
 			_create: function() {
-				_.bindAll(this);
+				_.bindAll(this, 'init', '_doOnButtonClick', '_submitUpload', '_positionInputOverBtn',
+					'_doOnUploadComplete', 'destroy');
 
 				this.$inputEl = this.element.siblings('input[type="text"]:first');
 
@@ -338,7 +340,8 @@
 					url : ajaxurl,
 					data:{
 						action: 'pexeto_upload',
-						testarg:'test'
+						testarg:'test',
+						nonce:PEXETO.uploadNonce
 					},
 					success: this._doOnUploadComplete
 				});
@@ -427,7 +430,7 @@
 			 * initialized.
 			 */
 			_create: function() {
-				_.bindAll(this);
+				_.bindAll(this, 'init', 'doOnClick', '_setHandlePosition', 'getValue', 'destroy');
 				this.val = false;
 				this.init();
 			},
@@ -560,7 +563,7 @@
 			 * initialized.
 			 */
 			_create: function() {
-				_.bindAll(this);
+				_.bindAll(this, 'init', 'doOnClick', '_loadValue', 'getValue', 'destroy');
 
 				this.val = [];
 				this.init();

@@ -548,6 +548,7 @@ return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.js
 		$itemsWrapper        = null,
 		$parent              = $root.parent(),
 		$loadingContainer    = null,
+		$body                = $('body'),
 		currentPage          = o.currentPage,
 		previousPage         = currentPage,
 		cachedItems          = [],
@@ -1719,8 +1720,9 @@ return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.js
 			$pageTop  = $navWrapper.length ? $navWrapper :  $('.page-title');
 			$itemTop = $navWrapper;
 
-			if($('body').hasClass('fixed-header')){
-				scrollOffset = -63;
+			if($body.hasClass('fixed-header')){
+				scrollOffset = $body.hasClass('fixed-header-scroll') ? -63 : -93;
+
 			}else{
 				scrollOffset = 0;
 			}

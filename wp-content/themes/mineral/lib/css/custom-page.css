@@ -390,3 +390,7 @@ html* .upload-button{  /* IE7 only */
     font-style: italic;
 }
 
+.custom-item-wrapper .arrow {
+    margin-left: 0;
+}
+

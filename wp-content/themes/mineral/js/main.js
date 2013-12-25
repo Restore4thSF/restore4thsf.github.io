@@ -1269,10 +1269,14 @@ var PEXETO = PEXETO || {};
 		 */
 		tabs: function() {
 			//set the tabs functionality
-			$('.tabs-container').pexetoTabs();
+			$('.tabs-container').each(function(){
+				$(this).pexetoTabs();
+			});
 
 			//set the accordion functionality
-			$('.accordion-container').pexetoAccordion();
+			$('.accordion-container').each(function(){
+				$(this).pexetoAccordion();
+			});
 		},
 
 		/**

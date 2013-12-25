@@ -24,7 +24,7 @@
 		 * Called when the widget is initialized, inits some variables.
 		 */
 		_create: function() {
-			_.bindAll(this);
+			_.bindAll(this, 'init', 'doOnSaveClick', 'doOnUpdate', 'ajaxSave');
 			this.saveBtn = $('#co-save-btn');
 			this.currentXhr = null;
 			this.loading = null;
