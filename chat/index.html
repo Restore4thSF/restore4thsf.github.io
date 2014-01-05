@@ -5,10 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="description" content="Converse.js: Open Source Browser-Based Instant Messaging" />
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="converse.min.css">
-    <script data-main="main" src="require.js"></script>
-    <script src="converse.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="converse.css">
+    <script data-main="main" src="components/requirejs/require.js"></script>
+    <!--<script src="builds/converse.min.js"></script>-->
     <title>Converse.js</title>
 </head>
 
@@ -179,14 +179,15 @@
 
 <div id="conversejs"></div>
 
+
 </body>
 <script>
-    require(['converse.min'], function (converse) {
+    require(['converse'], function (converse) {
         converse.initialize({
             allow_otr: true,
             auto_list_rooms: false,
             auto_subscribe: false,
-            bosh_service_url: 'https://restorethefourthfsf.com:5280/http-bind', // Please use this connection manager only for testing purposes
+            bosh_service_url: 'https://restorethefourthsf.com:5280/http-bind', // Please use this connection manager only for testing purposes
             debug: true ,
             hide_muc_server: false,
             i18n: locales['en'], // Refer to ./locale/locales.js to see which locales are supported
